@@ -1,5 +1,6 @@
-import { Building, ChevronDown, LogOut } from "lucide-react";
-import { Button } from "./ui/button";
+import { Building, ChevronDown, LogOut } from 'lucide-react'
+
+import { Button } from './ui/button'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -7,38 +8,38 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
+} from './ui/dropdown-menu'
 
-export const AccontMenu = () => {
+export function AccountMenu() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
           variant="outline"
-          className="flex items-center gap-2 select-none"
+          className="flex select-none items-center gap-2"
         >
           Pizza Shop
-          <ChevronDown />
+          <ChevronDown className="h-4 w-4" />
         </Button>
       </DropdownMenuTrigger>
+
       <DropdownMenuContent align="end" className="w-56">
         <DropdownMenuLabel className="flex flex-col">
-          <span>Diogo Peixoto</span>
+          <span>Diego Fernandes</span>
           <span className="text-xs font-normal text-muted-foreground">
-            diogo@gmail.com
+            diego@rocketseat.com.br
           </span>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-          <Building className="w-4 h-4 mr-2" />
+          <Building className="mr-2 h-4 w-4" />
           <span>Perfil da loja</span>
         </DropdownMenuItem>
-
         <DropdownMenuItem className="text-rose-500 dark:text-rose-400">
-          <LogOut className="w-4 h-4 mr-2" />
+          <LogOut className="mr-2 h-4 w-4" />
           <span>Sair</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  );
-};
+  )
+}
